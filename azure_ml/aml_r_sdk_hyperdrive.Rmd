@@ -207,12 +207,12 @@ for (i in seq_along(child_run_ids)){
   
   
   ## Get LR results
-  download_file_from_run(child_run, "outputs/cv_lr_results.csv")
+  download_file_from_run(child_run_iter, "outputs/cv_lr_results.csv")
   lr_results <- read.csv("cv_lr_results.csv") %>% mutate(source = "lr_results")
   file.remove("cv_lr_results.csv")
   
   ## Get RF results
-  download_file_from_run(child_run, "outputs/cv_rf_results.csv")
+  download_file_from_run(child_run_iter, "outputs/cv_rf_results.csv")
   rf_results <- read.csv("cv_rf_results.csv") %>% mutate(source = "rf_result")
   file.remove("cv_rf_results.csv")
   
